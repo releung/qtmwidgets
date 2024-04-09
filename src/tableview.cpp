@@ -38,8 +38,8 @@ public:
 
 	QSize minimumSizeHint() const override
 	{
-		if( text().isEmpty() && pixmap( Qt::ReturnByValue ).isNull() && !movie() &&
-			picture( Qt::ReturnByValue ).isNull() )
+        if( text().isEmpty() && pixmap() == nullptr && !movie() &&
+            picture() == nullptr )
 				return QSize( 0, 0 );
 		else
 		{
@@ -207,7 +207,7 @@ TableViewCellLayout::setGeometry( const QRect & rect )
 
 	const QSize accessorySizeHint = accessoryWidget->sizeHint();
 
-	if( imageLabel->pixmap( Qt::ReturnByValue ).isNull() || !imageLabel->text().isEmpty() )
+    if( imageLabel->pixmap() == nullptr || !imageLabel->text().isEmpty() )
 	{
 		if( accessorySizeHint.isEmpty() && textLabel->text().isEmpty() &&
 			detailedTextLabel->text().isEmpty() )

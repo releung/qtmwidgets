@@ -706,7 +706,7 @@ DateTimePicker::DateTimePicker( const QVariant & val, QMetaType::Type parserType
 	setSizePolicy( QSizePolicy( QSizePolicy::Fixed,
 		QSizePolicy::Fixed ) );
 
-	switch( val.metaType().id() )
+    switch( val.userType() )
 	{
 		case QMetaType::QDate :
 			setDate( val.toDate() );

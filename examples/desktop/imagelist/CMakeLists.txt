@@ -1,10 +1,10 @@
 
 project( imagelist )
 
-find_package( Qt6Core REQUIRED )
-find_package( Qt6Gui REQUIRED )
-find_package( Qt6Widgets REQUIRED )
-find_package( Qt6Concurrent REQUIRED )
+find_package( Qt5Core REQUIRED )
+find_package( Qt5Gui REQUIRED )
+find_package( Qt5Widgets REQUIRED )
+find_package( Qt5Concurrent REQUIRED )
 
 set( CMAKE_AUTOMOC ON )
 
@@ -27,4 +27,4 @@ link_directories( ${CMAKE_CURRENT_BINARY_DIR}/../../../lib )
 
 add_executable( imagelist ${SRC} )
 
-target_link_libraries( imagelist QtMWidgets Qt6::Widgets Qt6::Gui Qt6::Concurrent Qt6::Core )
+target_link_libraries( imagelist QtMWidgets Qt5::Widgets Qt5::Gui Qt5::Concurrent Qt5::Core )

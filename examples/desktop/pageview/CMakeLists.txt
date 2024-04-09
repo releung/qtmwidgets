@@ -1,9 +1,9 @@
 
 project( pageview )
 
-find_package( Qt6Core REQUIRED )
-find_package( Qt6Gui REQUIRED )
-find_package( Qt6Widgets REQUIRED )
+find_package( Qt5Core REQUIRED )
+find_package( Qt5Gui REQUIRED )
+find_package( Qt5Widgets REQUIRED )
 
 set( CMAKE_AUTOMOC ON )
 
@@ -22,4 +22,4 @@ link_directories( ${CMAKE_CURRENT_BINARY_DIR}/../../../lib )
 
 add_executable( pageview ${SRC} )
 
-target_link_libraries( pageview QtMWidgets Qt6::Widgets Qt6::Gui Qt6::Core )
+target_link_libraries( pageview QtMWidgets Qt5::Widgets Qt5::Gui Qt5::Core )
